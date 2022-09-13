@@ -25,8 +25,10 @@ export const Sidebar = (props) => {
   };
 
   const drawer = (
-    <div>
-      <Toolbar />
+    <div style={{backgroundColor:'rgb(0,7,35)',height:'100vh'}}>
+      <Toolbar>
+        <img src="../sources/Logologo.png" alt=""  style={{height:'100%', width:'100%'}}/>
+      </Toolbar>
       <Divider />
       <List>
         {['Order', 'Graphic', 'Menu'].map((text, index) => (
