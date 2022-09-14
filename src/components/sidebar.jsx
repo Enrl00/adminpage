@@ -32,6 +32,7 @@ export const Sidebar = (props) => {
   };
 
   const drawer = (
+
     <div style={{backgroundColor:'rgb(0,7,35)', height:'100vh'}}>
       <Toolbar style={{display:'flex', justifyContent:'center', alignItems:'center', paddingTop:'1vh'}}>
         <img src={logo} height={'80%'} width={'80%'} alt=''/>
