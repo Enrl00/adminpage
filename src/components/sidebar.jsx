@@ -2,7 +2,6 @@ import * as React from 'react';
 import {Link} from "react-router-dom";
 import{
         AppBar,
-        Box,
         CssBaseline,
         Divider, 
         Drawer,
@@ -12,9 +11,17 @@ import{
         ListItemButton,
         ListItemIcon, 
         ListItemText, 
-        Toolbar, } from '@mui/material';
+        Toolbar,
+        Typography,} from '@mui/material';
+import Box from '@mui/material/Box';
 import MenuIcon from '@mui/icons-material/Menu';
+import logo from '../sources/Logo.png';
+import graphic from '../sources/graphic.svg';
+import order from '../sources/order.svg';
+import menu from '../sources/menu.svg'
 const drawerWidth = 240;
+const pathname = window.location.pathname.split('/',2)
+
 
 export const Sidebar = (props) => {
   const { window } = props;
@@ -25,18 +32,19 @@ export const Sidebar = (props) => {
   };
 
   const drawer = (
-    <div style={{backgroundColor:'rgb(0,7,35)',height:'100vh'}}>
-      <Toolbar>
-        <img src="../sources/Logologo.png" alt=""  style={{height:'100%', width:'100%'}}/>
+
+    <div style={{backgroundColor:'rgb(0,7,35)', height:'100vh'}}>
+      <Toolbar style={{display:'flex', justifyContent:'center', alignItems:'center', paddingTop:'1vh'}}>
+        <img src={logo} height={'80%'} width={'80%'} alt=''/>
       </Toolbar>
       <Divider />
       <List>
-        {['Order', 'Graphic', 'Menu'].map((text, index) => (
-          <Link to={`/${text}`} style={{textDecoration:'none'}}> 
-            <ListItem key={text} disablePadding>
+        {['Order', 'Graphics', 'Menu'].map((text, index) => (
+          <Link to={`/${text}`} style={{textDecoration:'none', color:'white'}} > 
+            <ListItem key={text} disablePadding >
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <img src='../sources/FrameorderTest.png' alt=''></img> : <img src='../src/sources/order.svg' alt=''></img>}
+                  {index === 1 ? <img src={graphic} alt=''></img> : index === 2 ? <img src={menu} alt=''></img> : <img src={order} alt=''></img>}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -82,6 +90,9 @@ export const Sidebar = (props) => {
           >
             <MenuIcon />
           </IconButton>
+          <Typography variant='h6' noWrap component="div">
+          {pathname}
+          </Typography>
         </Toolbar>
       </AppBar>
     
@@ -91,6 +102,7 @@ export const Sidebar = (props) => {
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+       
         <Drawer
           container={container}
           variant="temporary"
