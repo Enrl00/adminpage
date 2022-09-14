@@ -1,13 +1,22 @@
-import {createContext, createTheme, useContext, useState} from 'react';
-import { UNSAFE_RouteContext } from 'react-router-dom';
+import {createContext,useContext, useState} from 'react';
 
 const OrderContext = createContext();
 
 export const OrderProvider = (props) => {
     const {children} = props;
     const [orderInfo, setOrderInfo] = useState( {
-        totalOrder:0,
-        orderId:''
+        all:10,
+        packed:2,
+        delivered:3,
+        mistaken:1,
+        order:{
+            orderId:'',
+            food:'',
+            address:'',
+            phoneNumber:'',
+            state:'',
+            time:''
+        }
     } );
     return(
         <OrderContext.Provider value={{orderInfo, setOrderInfo}}>
@@ -15,4 +24,4 @@ export const OrderProvider = (props) => {
         </OrderContext.Provider>
     )
 }
-export const useUserContext = () => useContext(OrderContext);
+export const useOrderContext = () => useContext(OrderContext);
