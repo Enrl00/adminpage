@@ -1,0 +1,8 @@
+11:15:09.645 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+11:15:09.910 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+11:15:31.693 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - foody-8160d-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 143ms, init: 0ms
+11:15:31.744 [NamespaceSystem-blocking-namespace-operation-dispatcher-8:foody-8160d-default-rtdb$-246957812:] INFO com.firebase.core.namespace.StateManager - Namespace foody-8160d-default-rtdb status Active to Active
+12:01:53.192 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+12:01:53.227 [NamespaceSystem-akka.actor.default-dispatcher-14] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: foody-8160d-default-rtdb
+12:01:53.251 [NamespaceSystem-akka.actor.default-dispatcher-14] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for foody-8160d-default-rtdb
+12:01:53.263 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.

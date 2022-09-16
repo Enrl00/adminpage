@@ -7,9 +7,8 @@ const App = () => {
 
   return (
     <Box>
-      <Sidebar/>
-      <InputDiv/>
       <Routes>
+        <Route path='/login' element={<InputDiv/>}/>
         <Route path="/" element={<Home />} />
         <Route path="Order" element={<Order />} />
         <Route path="Graphics" element={<Graphics/>}/>

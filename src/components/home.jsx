@@ -1,4 +1,4 @@
-
+import { Sidebar } from './sidebar';
 import {Box,Paper,styled} from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -11,6 +11,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export const Home = () => {
     return(
         <Box>
+            <Sidebar/>
         </Box>
     )
 }
