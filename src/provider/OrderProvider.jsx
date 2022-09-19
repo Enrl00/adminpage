@@ -1,23 +1,11 @@
 import {createContext,useContext, useState} from 'react';
+import order from '../data/order.json'
 
 const OrderContext = createContext();
 
 export const OrderProvider = (props) => {
     const {children} = props;
-    const [orderInfo, setOrderInfo] = useState( {
-        all:10,
-        packed:2,
-        delivered:3,
-        mistaken:1,
-        order:{
-            orderId:'',
-            food:'',
-            address:'',
-            phoneNumber:'',
-            state:'',
-            time:''
-        }
-    } );
+    const [orderInfo, setOrderInfo] = useState( {order} );
     return(
         <OrderContext.Provider value={{orderInfo, setOrderInfo}}>
             {children}

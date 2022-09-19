@@ -1,5 +1,5 @@
 import {auth} from './firebase'
-import { sendSignInLinkToEmail,createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
 // const actionCodeSettings = {
@@ -27,4 +27,7 @@ import { sendSignInLinkToEmail,createUserWithEmailAndPassword } from "firebase/a
 //             })
 //             .catch((error) => {
 //               console.log( error.message);
+
+
+// sendSignInLinkToEmail,
 //             })

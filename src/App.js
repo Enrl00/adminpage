@@ -1,7 +1,7 @@
 import './App.css';
 import {Box} from '@mui/material';
 import { Routes, Route } from "react-router-dom";
-import {Graphics, Sidebar,Home,Menu,Order} from './components';
+import {Graphics,Home,Menu,Order} from './components';
 import InputDiv from './components/logIn'
 const App = () => {
 
