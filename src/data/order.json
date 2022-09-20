@@ -1,8 +1,8 @@
 [
     {
       "orderID": 1,
-      "date": "2022-09-01",
-      "status": "Delivered",
+      "date": "September 10, 2022",
+      "status": "Ordered",
       "orders": [
         {
           "productID": 156,
@@ -20,8 +20,8 @@
     },
     {
       "orderID": 2,
-      "date": "2022-09-02",
-      "status": "Packed",
+      "date": "September 2, 2022",
+      "status": "Delivered",
       "orders": [
         { "productID": 98," productName": "Кимчижигээ", "amount": 2, "price": 33400 },
         { "productID": 45," productName": "Бүлгүги", "amount": 1," price": 15000 }
@@ -31,7 +31,7 @@
     },
     {
       "orderID": 3,
-      "date": "2022-09-03",
+      "date": "September 2, 2022",
       "status": "Mistaken",
       "orders": [
         { "productID": 156, "productName": "Кимчижигээ", "amount": 2, "price": 33400 },
@@ -42,7 +42,7 @@
     },
     {
       "orderID": 4,
-      "date": "2022-09-04",
+      "date": "September 3, 2022",
       "status": "Delivered",
       "orders": [
         { "productID": 75, "productName": "Кимчижигээ", "amount": 2, "price": 33400 },
@@ -53,7 +53,7 @@
     },
     {
       "orderID": 5,
-      "date": "2022-09-05",
+      "date": "September 5, 2022",
       "status": "Packed",
       "orders": [
         { "productID": 56, "productName": "Кимчижигээ", "amount": 2, "price": 33400 },
