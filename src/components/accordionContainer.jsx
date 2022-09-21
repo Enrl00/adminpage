@@ -5,14 +5,13 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Divider from '@mui/material/divider';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+import FadeMenu from './button';
 import location from '../sources/location.png';
 import phone from '../sources/phone.png'
 const styles = {
   spacing:{
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center' 
   }
 }
@@ -35,7 +34,7 @@ const AccordionContainer = ({ data }) => {
                 return (
                   <Box sx={ styles.spacing } >
                     <ul>{ele.productName}</ul>
-                    <span>×{ele.amount}</span>
+                    <Typography>×{ele.amount}</Typography>
                   </Box>
                 )
               })}
@@ -43,16 +42,16 @@ const AccordionContainer = ({ data }) => {
               <Box>
                 <Box sx={styles.spacing}>
                   <img src={location} alt='' />
-                  <Box>{el.address}</Box>
+                  <Box style={{fontSize:'14px',marginLeft:'3px'}}>{el.address}</Box>
                 </Box>
-                <Box>
+                <Box sx={styles.spacing}>
                   <img src={phone} alt="" />
-                  <span>{el.phoneNumber}</span>
+                  <Box style={{fontSize:'14px', marginLeft:"3px"}}>{el.phoneNumber}</Box>
                 </Box>
               </Box>
               <Divider />
               <Box>
-                <Button>Order</Button>
+                <FadeMenu data={el}/>
               </Box>
             </Box>
           </AccordionDetails>

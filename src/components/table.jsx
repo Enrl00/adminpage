@@ -27,10 +27,10 @@ const styles ={
 }
 
 export const CollapsibleTable = ({ data }) => {
-  let orderedArr = data.filter(({ status }) => status === "Ordered");
-  let packedArr = data.filter(({ status }) => status === "Packed");
-  let deliveredArr = data.filter(({ status }) => status === "Delivered");
-  let mistakenArr = data.filter(({ status }) => status === "Mistaken");
+  let orderedArr = data?.filter(({ status }) => status === "Ordered");
+  let packedArr = data?.filter(({ status }) => status === "Packed");
+  let deliveredArr = data?.filter(({ status }) => status === "Delivered");
+  let mistakenArr = data?.filter(({ status }) => status === "Mistaken");
   return (
     <Box>
       <TableContainer component={Paper} >
@@ -46,7 +46,7 @@ export const CollapsibleTable = ({ data }) => {
             </TableRow>
           </TableHead>
           <TableBody style={{backgroundColor: '#F5F5F7'}} sx={styles.tableBody}>
-            {orderedArr.length !== 0 && <AccordionContainer data={orderedArr} />}
+            {orderedArr?.length !== 0 && <AccordionContainer data={orderedArr} />}
           </TableBody>
         </Table>
       </TableContainer>
@@ -59,7 +59,7 @@ export const CollapsibleTable = ({ data }) => {
             </TableRow>
           </TableHead>
           <TableBody style={{ backgroundColor: '#FFF9F1'}}  sx={styles.tableBody}>
-            {packedArr.length !== 0 && <AccordionContainer data={packedArr} />}
+            {packedArr?.length !== 0 && <AccordionContainer data={packedArr} />}
           </TableBody>
         </Table>
       </TableContainer>

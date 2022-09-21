@@ -22,14 +22,15 @@ export const Order = () => {
             }}
           >
             {week.map((el, index) => {
-
-              const day = orderInfo.order.filter(({ date }) => new Date(date).getDay() === el);
+              console.log(orderInfo)
+              const day = orderInfo?.order?.filter(({date}) => new Date(date).getDay() === el);
+              console.log(day)
               return (
                 <Box key={index}>
                   <TableHead>
                     <TableRow>
                       <TableCell />
-                      <TableCell>{el === 0 ? 'Sunday' : el === 1 ? 'Monday' : el === 2 ? 'Tuesday' : el === 3 ? 'Wednesday' : el === 4 ? 'Thursday' : el === 5 ? 'Friday' : el === 6 ? 'Saturday' : 'Sunday'}</TableCell>
+                      <TableCell>{el === 0 ? 'Sunday' : el === 1 ? 'Monday' : el === 2 ? 'Tuesday' : el === 3 ? 'Wednesday' : el === 4 ? 'Thursday' : el === 5 ? 'Friday' : 'Saturday'}</TableCell>
                     </TableRow>
                   </TableHead>
                   <Box>
