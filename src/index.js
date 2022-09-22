@@ -6,15 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { CustomTheme } from './provider/ThemeProvider';
 import { OrderProvider } from './provider/OrderProvider';
+import { MenuProvider } from './provider/MenuProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <CustomTheme>
       <OrderProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <MenuProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </MenuProvider>
       </OrderProvider>
     </CustomTheme>
   </React.StrictMode>

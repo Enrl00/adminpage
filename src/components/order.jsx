@@ -22,9 +22,7 @@ export const Order = () => {
             }}
           >
             {week.map((el, index) => {
-              console.log(orderInfo)
               const day = orderInfo?.order?.filter(({date}) => new Date(date).getDay() === el);
-              console.log(day)
               return (
                 <Box key={index}>
                   <TableHead>

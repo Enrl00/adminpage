@@ -25,15 +25,16 @@ export default function FadeMenu({data}) {
   };
   const handleClose = (e) => {
     setAnchorEl(null);
-    console.log('initial info:', orderInfo)
-    const filtered = orderInfo.order.filter((el) => el.orderID !== data.orderID)
-    console.log('filtered:', filtered)
-    data.status = e;
-    console.log('data.status:',data.status)
-    filtered.push(data)
-    console.log('pushed filtered:', filtered)
-    setOrderInfo(filtered)
-    console.log('set orderinfo:', orderInfo)
+    const temp = [...orderInfo.order];
+    setOrderInfo('');
+    temp.map(el => {
+      if (el.orderID === data.orderID) {
+        el.status = e
+    }else{
+      return null;
+    }}
+    )
+    setOrderInfo({order: temp})
   };
   return (
     <div>
