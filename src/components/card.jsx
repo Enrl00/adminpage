@@ -1,4 +1,4 @@
-import {Box,Typography}from 'react';
+import {Box,Typography}from '@mui/material';
 import addButton from '../sources/addButton.png'
 
 const styles = {
