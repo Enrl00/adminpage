@@ -34,7 +34,6 @@ export default function FadeMenu({data}) {
       }})
 
     setOrderInfo({order: temp})
-    console.log(orderInfo);
   };
   return (
     <div>
