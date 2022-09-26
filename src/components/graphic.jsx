@@ -1,5 +1,5 @@
 export const Graphics = () => {
     return(
-        <h1>Graphics</h1>
+        <h1>Graphi</h1>
     )
     }
