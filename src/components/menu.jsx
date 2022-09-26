@@ -16,7 +16,7 @@ import {
     DialogTitle,
     useMediaQuery,
     TextField
-} from '@mui/material/';
+} from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import foodpic from '../sources/foodpic.png';
 import photo from '../sources/photo.png';
