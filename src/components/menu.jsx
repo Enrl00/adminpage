@@ -1,6 +1,6 @@
-import { Box, Divider, Typography } from '@mui/material';
 import { Sidebar } from './sidebar';
 import { useMenuContext } from '../provider/MenuProvider';
+import Ingredient from './ingredient';
 import MenuCard from './card';
 import BasicSelect from './selector';
 import addMenu from '../sources/addMenu.png'
@@ -15,7 +15,10 @@ import {
     DialogContentText,
     DialogTitle,
     useMediaQuery,
-    TextField
+    TextField,
+    Box,
+    Divider, 
+    Typography
 } from '@mui/material/';
 import { useTheme } from '@mui/material/styles';
 import foodpic from '../sources/foodpic.png';
@@ -146,6 +149,24 @@ export const Menu = () => {
                                             </Box>
                                         </Box>
                                         <Divider />
+                                        <Box>
+                                            <Box sx={styles.row}>
+                                                <Typography>Орц найрлага</Typography>
+                                                <Button>Орц нэмэх</Button>
+                                            </Box>
+                                            <Box>
+                                                <Ingredient data = {'yum'}/>
+                                            </Box>
+                                            <Divider />
+                                            <Box>
+                                                <Typography>Тэжээллэг чанар</Typography>
+                                                <input></input>
+                                                <Box>
+                                                    <input placeholder='Линк оруулж болно'></input>
+                                                    <Button></Button>
+                                                </Box>
+                                            </Box>
+                                        </Box>
                                     </Box>
                                 </DialogContentText>
                             </DialogContent>
