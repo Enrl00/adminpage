@@ -3,7 +3,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Divider from '@mui/material/divider';
+import { Divider } from '@mui/material';
 import Box from '@mui/material/Box';
 import FadeMenu from './button';
 import location from '../sources/location.png';
