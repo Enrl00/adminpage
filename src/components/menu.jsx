@@ -159,7 +159,7 @@ export const Menu = () => {
                                             </Box>
                                             <Divider />
                                             <Box>
-                                                <Typography>Тэжээллэг чанар</Typography>
+                                                <Typography>Тэжээллэг чанарs</Typography>
                                                 <input></input>
                                                 <Box>
                                                     <input placeholder='Линк оруулж болно'></input>
