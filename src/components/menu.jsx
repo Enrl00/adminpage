@@ -1,8 +1,9 @@
 import { Sidebar } from './sidebar';
 import { useMenuContext } from '../provider/MenuProvider';
-import Ingredient from './ingredient';
+// import Ingredient from './ingredient';
 import MenuCard from './card';
 import BasicSelect from './selector';
+import {DragDropFile} from './dragNdrop'
 import addMenu from '../sources/addMenu.png'
 import addButton from '../sources/addButton.png'
 import * as React from 'react';
@@ -11,8 +12,7 @@ import {
     Button,
     Dialog,
     DialogActions,
-    DialogContent,
-    DialogContentText,
+    Container,
     DialogTitle,
     useMediaQuery,
     TextField,
@@ -119,8 +119,8 @@ export const Menu = () => {
                             <DialogTitle id="responsive-dialog-title">
                                 Add new Menu
                             </DialogTitle>
-                            <DialogContent>
-                                <DialogContentText>
+                            <Container>
+                                <Box>
                                     <Box styles={{width:'60%'}}>
                                         <Box sx={styles.row}>
                                             <Box>
@@ -155,21 +155,21 @@ export const Menu = () => {
                                                 <Button>Орц нэмэх</Button>
                                             </Box>
                                             <Box>
-                                                <Ingredient data = {'yum'}/>
+                                                {/* <Ingredient/> */}
                                             </Box>
                                             <Divider />
                                             <Box>
                                                 <Typography>Тэжээллэг чанарs</Typography>
-                                                <input></input>
-                                                <Box>
-                                                    <input placeholder='Линк оруулж болно'></input>
-                                                    <Button></Button>
+                                                <DragDropFile/>
+                                                <Box sx={{marginTop: '1vh'}}>
+                                                    <input placeholder='Линк оруулж болно'/>
+                                                    <Button variant='filled'>Оруулах</Button>
                                                 </Box>
                                             </Box>
                                         </Box>
                                     </Box>
-                                </DialogContentText>
-                            </DialogContent>
+                                </Box>
+                            </Container>
                             <DialogActions>
                                 <Button autoFocus onClick={handleClose}>
                                     Disagree
