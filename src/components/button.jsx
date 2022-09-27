@@ -27,7 +27,7 @@ export default function FadeMenu({data}) {
     setAnchorEl(null);
     const temp = [...orderInfo.order];
     setOrderInfo('');
-    temp.map(el => {
+    temp.forEach(el => {
       if (el.orderID === data.orderID) {
         el.status = e
     }else{
