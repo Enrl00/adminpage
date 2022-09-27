@@ -1,10 +1,6 @@
-const Ingredient = ({data}) => {
+const Ingredient = () => {
     return(
-        data.map(el => {
-            return(
-'yum'
-            )
-        })
+        <h1>ingredient</h1>
     )
 }
 export default Ingredient();
